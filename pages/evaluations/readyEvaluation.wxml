@@ -1,0 +1,16 @@
+<!--pages/evaluations/readyEvaluation.wxml-->
+<view class='containe'>
+  <view class='text-bar'>安全考评信息</view>
+  <view class='tab-box'>
+    <view class='tab-item'>考评名称</view>
+    <view class='tab-item'>考评工程</view>
+  </view>
+  <view class='tab-box'>
+    <view class='tab-item'>{{secleted.name}}</view>
+    <view class='tab-item'>{{secleted.project}}</view>
+  </view>
+  <view class='tab-box bottom-btn'>
+    <button class='tab-item btn' bindtap='btnBack'>稍候再考评</button>
+    <button class='tab-item btn' bindtap='btnStart'>开始考评</button>
+  </view>
+</view>

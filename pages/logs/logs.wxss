@@ -1,0 +1,20 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+}
+.logicon{
+  margin-top: 168rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+.text-log{
+  color: red;
+  padding: 30rpx;
+}
+.btn-loging{
+  margin-top: 50rpx;
+  width: 70%;
+  background-color: green;
+  color: white;
+}
+

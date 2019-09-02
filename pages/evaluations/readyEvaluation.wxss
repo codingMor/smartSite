@@ -1,0 +1,34 @@
+/* pages/evaluations/readyEvaluation.wxss */
+.containe{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-bar{
+margin-top: 200rpx;
+padding: 20rpx;
+font-size: 50rpx;
+}
+.tab-box{
+  font-size: 30rpx;
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.tab-item{
+  flex: 1;
+  border: 2rpx solid skyblue;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.bottom-btn{
+  margin-top: 20rpx;
+}
+.btn{
+  flex: none;
+  width: 45%;
+  border: 0rpx;
+  padding: 0;
+}

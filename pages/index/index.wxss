@@ -1,0 +1,60 @@
+/**index.wxss**/
+
+/* .index-btn{
+width: 70%;
+margin: 50rpx;
+background-color: green;
+color: white;
+} */
+
+.container {
+  padding: 50rpx;
+}
+
+.table-title {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  text-align: center;
+  color: #797979;
+  padding: 40rpx 0;
+  font-size: 30rpx;
+}
+
+.item-icon {
+  width: 110rpx;
+  height: 110rpx;
+}
+.project{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  border: 5rpx solid #416ce4;
+  align-items: stretch;
+}
+.item-left{
+  padding-left: 20rpx;
+}
+.projectPicker{
+flex: 1;
+position: relative;
+}
+.selectedProject{
+flex: 1;
+}
+.downIcon{
+  padding: 0;
+  position: absolute;
+  right: 5rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+

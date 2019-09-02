@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/logs/logs",
+    "pages/regs/regs",
+    "pages/evaluations/safeEvaluation",
+    "pages/userinfos/userinfos",
+    "pages/index/index",
+    "pages/phoneUpdates/phoneUpdates",
+    "pages/evaluations/evaluations",
+    "pages/evaluations/readyEvaluation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧工地",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作",
+        "iconPath": "images/tabicon/work1.png",
+        "selectedIconPath": "images/tabicon/work.png"
+      },
+      {
+        "pagePath": "pages/userinfos/userinfos",
+        "text": "我的",
+        "iconPath": "images/tabicon/userInfo1.png",
+        "selectedIconPath": "images/tabicon/userInfo.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

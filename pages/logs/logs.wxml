@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <image class='logicon' src='/images/log/ic_gd_geosun_icon.png'></image>
+  <text class='text-log'>{{textLog}}</text>
+  <!-- <button open-type='getUserInfo' class='btn-loging' bindgetuserinfo='getUserInfo'>{{textBtn}}</button> -->
+  <button class='btn-loging' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{textBtn}}</button>
+  <view wx:else>请升级微信版本</view>
+</view>

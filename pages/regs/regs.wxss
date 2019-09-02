@@ -1,0 +1,31 @@
+/* pages/regs/regs.wxss */
+
+.user-reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weui-cells {
+  margin-top: 60rpx;
+}
+
+.foot-btn {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+}
+
+.user-btn {
+  width: 300rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.phoneNum {
+  color: #9c9c9cd8;
+}
+
+.hidden-text {
+  color: #ff0000;
+}

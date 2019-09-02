@@ -1,0 +1,42 @@
+<!--pages/regs/regs.wxml-->
+<view class="user-reg">个人信息认证</view>
+<view class="weui-cells weui-cells_after-title">
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">身份证号码</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入身份证号码" type='idcard' maxlength='18' bindblur='idcardCheck' />
+    </view>
+  </view>
+<view wx:if="{{!isCard}}" class="weui-cell weui-cell_input weui-cell_vcode hidden-text">请输入正确的身份证号码!</view>
+
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">手机号</view>
+    </view>
+    <view class="weui-cell__bd">
+      <text class="weui-input phoneNum">{{user.phoneNum}}</text>
+    </view>
+    <view class="weui-cell__ft">
+      <view class="weui-vcode-btn">获取验证码</view>
+    </view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">手机验证码</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入手机验证码" />
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{!isCheckNum}}" class="weui-cell weui-cell_input weui-cell_vcode hidden-text">请输入正确的验证码!</view>
+
+<view class='foot-btn'>
+  <button class='user-btn'>重置</button>
+  <button class='user-btn'>提交</button>
+</view>

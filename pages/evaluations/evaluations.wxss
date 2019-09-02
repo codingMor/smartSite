@@ -1,0 +1,19 @@
+/* pages/evaluations/evaluations.wxss */
+.topic{
+  padding-left: 20rpx;
+}
+.answer{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+}
+.evaluations-foot-btn{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.foot-btn{
+  width: 30%;
+  height: 3rem;
+}

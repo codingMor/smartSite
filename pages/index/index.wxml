@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <button class='index-btn btn-info' bindtap='btnInfo'>{{textArr[0]}}</button>
+  <button class='index-btn btn-history' bindtap='btnHistory'>{{textArr[1]}}</button>
+  <button class='index-btn btn-start' bindtap='btnStart'>{{textArr[2]}}</button>
+</view> -->
+<view class='container'>
+
+  <view class='project'>
+    <view class='item-left'>当前项目：</view>
+    <view class='projectPicker'>
+      <picker bindchange='selectProject' value="{{index}}" range="{{projects}}">
+        <text class='selectedProject'>{{projects[index]}}</text>
+        <image class='downIcon' src='../../images/down.png' bindtap='spinner'></image>
+      </picker>
+    </view>
+  </view>
+
+  <view class='table-title'>
+    <view class='item' bindtap='safeEducation'>
+      <image class='item-icon' mode="aspectFit" src='{{images[0]}}' mode='aspectFill'></image>
+      <view>{{textArr[0]}}</view>
+    </view>
+
+    <view class='item' bindtap='safeBlackList'>
+      <image class='item-icon' mode="aspectFit" class='item-icon' src='{{images[1]}}'></image>
+      <view>{{textArr[1]}}</view>
+    </view>
+
+    <view class='item' bindtap='safeEvaluations'>
+      <image class='item-icon' mode="aspectFit" class='item-icon' src='{{images[2]}}'></image>
+      <view>{{textArr[2]}}</view>
+    </view>
+  </view>
+
+</view>

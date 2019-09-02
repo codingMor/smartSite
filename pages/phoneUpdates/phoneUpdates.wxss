@@ -1,0 +1,13 @@
+/* pages/phoneUpdates/phoneUpdates.wxss */
+.weui-cells{
+  margin-top: 200rpx;
+}
+.foot-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.user-btn{
+  width: 300rpx;
+}
