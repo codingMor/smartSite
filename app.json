@@ -7,7 +7,7 @@
     "pages/index/index",
     "pages/phoneUpdates/phoneUpdates",
     "pages/evaluations/evaluations",
-    "pages/evaluations/readyEvaluation"
+    "pages/phoneUpdates/oldPhone"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "1.5.8",
 	"appid": "wxb96911641780502a",
 	"projectname": "SmartSiteMiniSafe",
 	"debugOptions": {

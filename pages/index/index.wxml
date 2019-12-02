@@ -9,8 +9,8 @@
   <view class='project'>
     <view class='item-left'>当前项目：</view>
     <view class='projectPicker'>
-      <picker bindchange='selectProject' value="{{index}}" range="{{projects}}">
-        <text class='selectedProject'>{{projects[index]}}</text>
+      <picker bindchange='selectProject' value="{{index}}" range="{{projects}}" range-key="project_name">
+        <text class='selectedProject'>{{projects[index].project_name}}</text>
         <image class='downIcon' src='../../images/down.png' bindtap='spinner'></image>
       </picker>
     </view>

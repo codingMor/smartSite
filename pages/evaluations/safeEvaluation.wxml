@@ -1,7 +1,7 @@
 <!--pages/evaluations/safeEvaluation.wxml-->
 <view class="swiper-tab">
-  <view style="padding-left:5px;" class="tab-list-left {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待考评</view>
-  <view class="tab-list-right {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已考评 </view>
+  <view style="padding-left:5px;" class="tab-list-left {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待考评</view>
+  <view class="tab-list-right {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已考评 </view>
 </view>
 <swiper current="{{currentTab}}" bindchange="bindChange" style="height:100%;">
   <swiper-item>这是第一个</swiper-item>
@@ -11,22 +11,25 @@
 <view class='table'>
   <view class='tr bg-w'>
     <view class='th'>考评名称</view>
-    <view class='th'>考评时间</view>
+    <view class='th'>截止时间</view>
     <view class='th'>考评工程</view>
     <view class='th'>考评结果</view>
   </view>
+  <view class="empty-view">
+  <image mode="scaleToFill" wx:if="{{listData.length == 0}}" class="empty-image" src="../../images/icon_empty.png"></image>
+  </view>
   <block wx:for="{{listData}}" wx:key="{{code}}">
     <view class='tr bg-g' wx:if="{{index%2 == 1}}" bindtap='starEvaluation' data-selected="{{item}}">
-      <view class='td'>{{item.name}}</view>
-      <view class='td'>{{item.data}}</view>
-      <view class='td'>{{item.project}}</view>
-      <view class='td'>{{item.status}}</view>
+      <view class='td'>{{item.assessment_task_name}}</view>
+      <view class='td'>{{item.taskTime}}</view>
+      <view class='td'>{{item.engineer_name}}</view>
+      <view class='td'>{{currentTab == 2 ? '已考评' : '未考评'}}</view>
     </view>
     <view class='tr' bindtap='starEvaluation' data-selected='{{item}}' wx:else >
-      <view class='td'>{{item.name}}</view>
-      <view class='td'>{{item.data}}</view>
-      <view class='td'>{{item.project}}</view>
-      <view class='td'>{{item.status}}</view>
+      <view class='td'>{{item.assessment_task_name}}</view>
+      <view class='td'>{{item.taskTime}}</view>
+      <view class='td'>{{item.engineer_name}}</view>
+      <view class='td'>{{currentTab == 2 ? '已考评' : '未考评'}}</view>
     </view>
   </block>
 </view>

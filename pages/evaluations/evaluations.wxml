@@ -1,6 +1,6 @@
 <!--pages/evaluations/evaluations.wxml-->
 <view class='contanie'>
-  <text class='topic'>{{toptic}}</text>
+  <!-- <text class='topic'>{{toptic}}</text>
   <radio-group class="answer" bindchange="selectedAnswer">
     <radio wx:for="{{answers}}" wx:key="answer" value='{{index}}' checked="{{item.selected ? true : ''}}">{{item.answer}}</radio>
   </radio-group>
@@ -8,7 +8,29 @@
     <button class='foot-btn' bindtap='btnPre' disabled="{{preDisabled}}">{{pre}}</button>
     <text>{{topticIndex}}/{{topticsLength}}</text>
     <!-- <button bindtap='btnNext' disabled='{{nextDisabled}}'>{{next}}</button> -->
-    <button class='foot-btn' bindtap='submitEvaluations' wx:if="{{topticIndex === topticsLength}}">{{submit}}</button>
+    <!-- <button class='foot-btn' bindtap='submitEvaluations' wx:if="{{topticIndex === topticsLength}}">{{submit}}</button>
+    <button class='foot-btn' bindtap='btnNext' wx:else>{{next}}</button>
+  </view> -->
+
+<view class="radio-question" wx:if="{{currentQuestion.question_type==1}}">
+  <view class="topic">{{currentQuestion.question}}</view>
+  <radio-group class="answer" bindchange="selectedAnswer">
+    <radio value="a" checked="{{checkOne}}">{{currentQuestion.answers_one}}</radio>
+    <radio value="b" checked="{{checkTwo}}">{{currentQuestion.answers_two}}</radio>
+    <radio value="c" checked="{{checkThree}}">{{currentQuestion.answers_three}}</radio>
+    <radio value="d" checked="{{checkFour}}">{{currentQuestion.answers_four}}</radio>
+  </radio-group>
+</view>
+
+   <view class='evaluations-foot-btn'>
+    <button class='foot-btn' bindtap='btnPre' disabled="{{preDisabled}}">{{pre}}</button>
+    <text>{{currentIndex + 1}}/{{questions.length}}</text>
+    <!-- <button bindtap='btnNext' disabled='{{nextDisabled}}'>{{next}}</button> -->
+    <button class='foot-btn' bindtap='submitEvaluations' wx:if="{{currentIndex === questions.length-1}}">{{submit}}</button>
     <button class='foot-btn' bindtap='btnNext' wx:else>{{next}}</button>
   </view>
+  
+  <view class="foot-indexs">
+    <view class="button-index {{currentIndex == index ? 'current-index' : questions[index].answer == null ? '':questions[index].answer == ''?'':'answered-index' }}" wx:for="{{questions}}"  bindtap="checkQuestion" id="{{index}}">{{index + 1}}</view>
+ </view>
 </view>

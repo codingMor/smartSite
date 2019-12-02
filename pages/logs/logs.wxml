@@ -4,5 +4,6 @@
   <text class='text-log'>{{textLog}}</text>
   <!-- <button open-type='getUserInfo' class='btn-loging' bindgetuserinfo='getUserInfo'>{{textBtn}}</button> -->
   <button class='btn-loging' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{textBtn}}</button>
-  <view wx:else>请升级微信版本</view>
+  <!-- <button wx:else >微信版本过低</button> -->
+  <view wx:else>请升级至微信版本6.5.13之上</view>
 </view>

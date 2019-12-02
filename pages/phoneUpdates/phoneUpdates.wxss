@@ -1,5 +1,5 @@
 /* pages/phoneUpdates/phoneUpdates.wxss */
-.weui-cells{
+/* .weui-cells{
   margin-top: 200rpx;
 }
 .foot-btn{
@@ -10,4 +10,7 @@
 }
 .user-btn{
   width: 300rpx;
+} */
+.hidden-text{
+  color: red;
 }

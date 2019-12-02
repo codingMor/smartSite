@@ -7,16 +7,35 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now());
     wx.setStorageSync('logs', logs);
-    var local = wx.getStorageSync('localUserInfo') || []
-    console.log("本地存储的用户信息"+local);
+   
     this.getSys();
+
+    // this.getLocalInfo();
+    
+    //检查用户登录
+    let p = new Promise(function(resolve,reject){
+      let local = wx.getStorageSync('localUserInfo');
+      let status = 0;
+      if(local){
+        status = local.statu;
+      }
+      if(local && status == 1){
+        //用户已登录，不拦截
+      }else{
+        //若用户未登录，拦截
+        resolve();
+      }
+    });
+    this.globalData.promise = p;
+    console.log("测试promise:===============" + this.globalData.promise +"===================")
   },
   
   globalData: {
     userInfo: null,
     sysInfo:null,
     windowW:null,
-    windowH:null
+    windowH:null,
+    promise:null
   },
   Util:{
     ajax,
@@ -42,5 +61,13 @@ App({
         that.globalData.windowH = res.windowHeight;
       },
     })
-  }
+  },
+
+  //获取缓存信息
+  // getLocalInfo:function(){
+  //   let that = this;
+  //   let local = wx.getStorageSync('localUserInfo');
+  //   console.log("启动小程序加载缓存："+local)
+  //   that.globalData.localUser = local;
+  // }
 })

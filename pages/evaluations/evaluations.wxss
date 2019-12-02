@@ -17,3 +17,30 @@
   width: 30%;
   height: 3rem;
 }
+.foot-indexs{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-index{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60rpx;
+  height: 60rpx;
+  background-color:yellow; 
+  margin: 10rpx;
+  border-radius: 500px;
+  color: white;
+}
+.current-index{
+  background-color:red;
+  width: 75rpx;
+  height: 75rpx;
+}
+.answered-index{
+  background-color:green;
+}

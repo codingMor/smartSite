@@ -1,0 +1,4 @@
+/* pages/phoneUpdates/oldPhone.wxss */
+.hidden-text {
+  color: #ff0000;
+}

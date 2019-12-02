@@ -21,6 +21,15 @@ Page({
     wx.showLoading({
       title: '登录中……',
     })
+
+    let localUser = wx.getStorageSync("localUserInfo");
+    let idCard = "";
+    let phoneNum = "";
+    if(localUser){
+     idCard = localUser.idCard;
+     phoneNum = localUser.phoneNum;
+    }
+    console.log("本地的身份证号码："+idCard+",本地存储的手机号码："+phoneNum)
   wx.getSetting({
     success:res=>{
       if (res.authSetting['scope.userInfo']){
@@ -34,7 +43,7 @@ Page({
               wx.getUserInfo({
                 success: function(res){
                   console.log({ encryptedData: res.encryptedData, iv: res.iv, code: code })
-                  app.http.loginToServers(res.encryptedData,res.iv,code,'431103198903105754','')
+                  app.http.loginToServers(res.encryptedData, res.iv, code, idCard, phoneNum)
                   .then(res =>{
                     wx.hideLoading()
                     console.log(res)
@@ -49,6 +58,11 @@ Page({
                         success: function(res) {},
                         fail: function(res) {},
                         complete: function(res) {},
+                      })
+                    }else if(res.resultCode == -2){
+                      console.log(res.resultDesc)
+                      wx.navigateTo({
+                        url: '../../pages/regs/regs',
                       })
                     }else{
                       console.log(res.resultCode)
